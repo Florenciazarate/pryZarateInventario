@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace pryZarateInventario
 {
-    public partial class frmInventario : Form
+    public partial class frmInformacionProducto : Form
     {
-        public frmInventario()
+        public frmInformacionProducto()
         {
             InitializeComponent();
         }
-
-     
     }
 }
