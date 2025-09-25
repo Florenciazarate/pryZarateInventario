@@ -33,10 +33,12 @@
             panel1 = new Panel();
             btnEliminar = new Button();
             btnModificar = new Button();
-            lblCategoria = new Label();
+            lblDescripción = new Label();
             lblNombre = new Label();
             lblCodigo = new Label();
             btnCancelar = new Button();
+            lblPrecio = new Label();
+            lblStock = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,21 +55,23 @@
             // panel1
             // 
             panel1.BackColor = Color.Ivory;
+            panel1.Controls.Add(lblStock);
+            panel1.Controls.Add(lblPrecio);
             panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(btnModificar);
-            panel1.Controls.Add(lblCategoria);
+            panel1.Controls.Add(lblDescripción);
             panel1.Controls.Add(lblNombre);
             panel1.Controls.Add(lblCodigo);
             panel1.Location = new Point(46, 42);
             panel1.Name = "panel1";
-            panel1.Size = new Size(538, 218);
+            panel1.Size = new Size(538, 290);
             panel1.TabIndex = 1;
             // 
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.Ivory;
             btnEliminar.Font = new Font("Nirmala Text", 9.75F);
-            btnEliminar.Location = new Point(210, 170);
+            btnEliminar.Location = new Point(207, 242);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(180, 30);
             btnEliminar.TabIndex = 5;
@@ -78,7 +82,7 @@
             // 
             btnModificar.BackColor = Color.Ivory;
             btnModificar.Font = new Font("Nirmala Text", 9.75F);
-            btnModificar.Location = new Point(24, 170);
+            btnModificar.Location = new Point(21, 241);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(180, 32);
             btnModificar.TabIndex = 4;
@@ -86,15 +90,15 @@
             btnModificar.UseVisualStyleBackColor = false;
             btnModificar.Click += btnModificar_Click;
             // 
-            // lblCategoria
+            // lblDescripción
             // 
-            lblCategoria.AutoSize = true;
-            lblCategoria.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCategoria.Location = new Point(20, 101);
-            lblCategoria.Name = "lblCategoria";
-            lblCategoria.Size = new Size(80, 21);
-            lblCategoria.TabIndex = 3;
-            lblCategoria.Text = "Categoría:";
+            lblDescripción.AutoSize = true;
+            lblDescripción.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescripción.Location = new Point(20, 101);
+            lblDescripción.Name = "lblDescripción";
+            lblDescripción.Size = new Size(94, 21);
+            lblDescripción.TabIndex = 3;
+            lblDescripción.Text = "Descripción:";
             // 
             // lblNombre
             // 
@@ -119,7 +123,7 @@
             // btnCancelar
             // 
             btnCancelar.Font = new Font("Nirmala Text", 9.75F);
-            btnCancelar.Location = new Point(451, 318);
+            btnCancelar.Location = new Point(451, 369);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(133, 30);
             btnCancelar.TabIndex = 6;
@@ -127,12 +131,32 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
+            // lblPrecio
+            // 
+            lblPrecio.AutoSize = true;
+            lblPrecio.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPrecio.Location = new Point(20, 133);
+            lblPrecio.Name = "lblPrecio";
+            lblPrecio.Size = new Size(56, 21);
+            lblPrecio.TabIndex = 6;
+            lblPrecio.Text = "Precio:";
+            // 
+            // lblStock
+            // 
+            lblStock.AutoSize = true;
+            lblStock.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblStock.Location = new Point(20, 163);
+            lblStock.Name = "lblStock";
+            lblStock.Size = new Size(51, 21);
+            lblStock.TabIndex = 7;
+            lblStock.Text = "Stock:";
+            // 
             // frmInformacionProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightYellow;
-            ClientSize = new Size(662, 366);
+            ClientSize = new Size(662, 433);
             Controls.Add(btnCancelar);
             Controls.Add(lblInfomacion);
             Controls.Add(panel1);
@@ -153,12 +177,14 @@
 
         private Label lblInfomacion;
         private Panel panel1;
-        private Label lblCategoria;
+        private Label lblDescripción;
         private Label lblNombre;
         private Label lblCodigo;
         private Button btnCancelar;
         private Button btnEliminar;
         private Button btnModificar;
         private FlowLayoutPanel flowLayoutPanel1;
+        private Label lblStock;
+        private Label lblPrecio;
     }
 }
