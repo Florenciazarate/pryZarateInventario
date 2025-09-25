@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,16 @@ namespace pryZarateInventario
             InitializeComponent();
         }
 
-     
+        private void frmInventario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            frmInformacionProducto informacionProducto = new frmInformacionProducto();
+            informacionProducto.Show();
+            this.Hide();
+        }
     }
 }

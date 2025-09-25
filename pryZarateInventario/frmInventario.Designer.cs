@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInventario));
             lblInventario = new Label();
             panel1 = new Panel();
-            btnAgregar = new Button();
-            txtProducto = new TextBox();
-            lblBuscarProducto = new Label();
             btnBuscar = new Button();
+            lblBuscarProducto = new Label();
+            txtProducto = new TextBox();
+            btnAgregar = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,34 +60,6 @@
             panel1.Size = new Size(515, 330);
             panel1.TabIndex = 1;
             // 
-            // btnAgregar
-            // 
-            btnAgregar.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnAgregar.Location = new Point(23, 167);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(183, 44);
-            btnAgregar.TabIndex = 0;
-            btnAgregar.Text = "Agregar un producto";
-            btnAgregar.UseVisualStyleBackColor = true;
-            // 
-            // txtProducto
-            // 
-            txtProducto.BackColor = Color.Ivory;
-            txtProducto.Location = new Point(19, 67);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(208, 23);
-            txtProducto.TabIndex = 1;
-            // 
-            // lblBuscarProducto
-            // 
-            lblBuscarProducto.AutoSize = true;
-            lblBuscarProducto.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblBuscarProducto.Location = new Point(12, 35);
-            lblBuscarProducto.Name = "lblBuscarProducto";
-            lblBuscarProducto.Size = new Size(363, 21);
-            lblBuscarProducto.TabIndex = 3;
-            lblBuscarProducto.Text = "Ingresa el nombre, código o categoría del producto";
-            // 
             // btnBuscar
             // 
             btnBuscar.BackColor = Color.DarkKhaki;
@@ -99,6 +71,35 @@
             btnBuscar.TabIndex = 4;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // lblBuscarProducto
+            // 
+            lblBuscarProducto.AutoSize = true;
+            lblBuscarProducto.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblBuscarProducto.Location = new Point(12, 35);
+            lblBuscarProducto.Name = "lblBuscarProducto";
+            lblBuscarProducto.Size = new Size(363, 21);
+            lblBuscarProducto.TabIndex = 3;
+            lblBuscarProducto.Text = "Ingresa el nombre, código o categoría del producto";
+            // 
+            // txtProducto
+            // 
+            txtProducto.BackColor = Color.Ivory;
+            txtProducto.Location = new Point(19, 67);
+            txtProducto.Name = "txtProducto";
+            txtProducto.Size = new Size(208, 23);
+            txtProducto.TabIndex = 1;
+            // 
+            // btnAgregar
+            // 
+            btnAgregar.Font = new Font("Nirmala Text", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAgregar.Location = new Point(23, 167);
+            btnAgregar.Name = "btnAgregar";
+            btnAgregar.Size = new Size(183, 44);
+            btnAgregar.TabIndex = 0;
+            btnAgregar.Text = "Agregar un producto";
+            btnAgregar.UseVisualStyleBackColor = true;
             // 
             // frmInventario
             // 
@@ -113,6 +114,7 @@
             Name = "frmInventario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventario";
+            Load += frmInventario_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
